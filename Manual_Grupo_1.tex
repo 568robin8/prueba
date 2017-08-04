@@ -1,0 +1,339 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt,openany]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{subfig}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 'dedication' environment: To add a dedication paragraph at the start of book %
+% Source: http://www.tug.org/pipermail/texhax/2010-June/015184.html            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.66\textwidth}
+   \raggedright
+}
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Book's title and subtitle
+\title{\Huge \textbf{Manual de Mantenimiento de una Computadora}  \\ \huge Practicas Iniciales e Intermedias Segundo Semestre }
+% Author
+
+\author{Robin Armando Salvatierra Bautista, 200915428 \\
+Herbert Rafael Reyes Portillo, 201612114 \\ 
+Javier Estuardo Lima Abrego, 201612098
+}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Auto-generated table of contents, list of figures and list of tables %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+
+
+\mainmatter
+
+%%%%%%%%%%%
+% Preface %
+%%%%%%%%%%%
+\chapter*{Prefacio}
+Las computadoras siempre han sido un concepto complejo; especialmente cuando el enfoque está orientado al análisis y estudio de sus características y estructura. Ya que al referirnos a su estructura, se relacionan conceptos como el comportamiento, funcionamiento y manejo de sus componentes. Por lo tanto, es importante siempre contar con una guía que facilite la comprensión y estudio de una computadora. 
+\\ \\
+Con el objetivo de facilitar dicha comprensión, el siguiente manual fue elaborado como una guía al usuario; para poder realizar el mantenimiento básico de una computadora, de maera sencilla y accessible para cualquier persona. Introduciendo conocimientos básicos necesarios y detallando el procedimeinto.
+
+%%%%%%%%%%%%%%%%
+% NEW CHAPTER! %
+%%%%%%%%%%%%%%%%
+\chapter{Introducción}
+Las computadoras en la actualidad son una herramienta de gran utilidad  para realizar diversas tareas, funciones y operaciones. Siendo las computadoras herramientas con tantas capacidades, necesita de cuidados y mantenimientos para su óptimo funcionamiento.  \par
+
+\section{¿Qué es el mantenimiento para una computadora?}
+
+Como cualquier máquina, sus partes y componentes llegan a ensuciarse o que algún a algún componente llegue a caducarse su tiempo de uso, por lo que es necesario realizarle un mantenimiento, el cuál puede ser correctivo o preventivo. \par
+
+En este manual se aprenderá a realizar un mantenimiento preventivo, éste mantenimiento es importante porque reduce la probabilidad de problemas de
+hardware y software al comprobar el hardware y el software de manera periódica y
+sistemática a fin de garantizar su funcionamiento correcto \par
+
+Entre los factores a tomar en cuenta para el mantenimiento tenemos:\par
+
+
+\begin{itemize}
+\item Mejoramiento del rendimiento de la computadora.
+\item Prevención de posibles daños en la computadora.
+\item Revisión de los componentes de la computadora.
+
+\end{itemize}
+
+\chapter{La computadora}
+La computadora es un dispositivo electrónico que fue diseñado con el propósito de procesar la información que el usuario ingresa mediante diferentes métodos y devolverla convertida en los datos útiles que el operador necesita. Para ello se vale de los llamados programas, es decir el software o aplicaciones. \\ \\
+Las computadoras se han vuelto una herramienta de gran importancia tanto a nivel educativo como nivel laboral. El valor de una computadora radica en la velocidad y precisión con la cual ésta ejecuta las instrucciones. La capacidad de una computadora se hace específicamente para el ambiente en donde ésta va a operar.\\
+
+Las funciones de las computadora se pueden resumir en 3 principales, las cuales son:\par 
+
+\begin{itemize}
+\item Entrada: La unidad de entrada, INPUT, es el término que se utiliza para referirse a la entrada de datos al
+computador. Entre los medios más usados para la entrada de datos están: el teclado, el mouse, los discos flexibles (floppy disks) y las cintas magnéticas.
+\item Proceso: La unidad central de procesamiento (C.P.U.) se encarga de realizar cualquier acción en el interior de la
+computadora. Estas acciones responden a los datos que han sido suministrados por el usuario. En el proceso se puede modificar el contenido o la forma de los datos, o simplemente transferirlos de una fuente a otra sin alterarlos.
+\item Salida: La unidad de salida, OUTPUT, se utiliza para obtener la información deseada. La información se
+define como el resultado obtenido luego de procesar los datos. Esta información puede obtenerse
+mediante: papel, monitor, cintas magnéticas, entre otros.
+\end{itemize}
+\section{Características de una Computadora}
+Entre las principales características de una computadora se tienen:
+
+\begin{itemize}
+\item  La cantidad de tiempo que  puede realizar tareas sin interrupciones o baja de rendimiento.
+\item Almacena gran cantidad de información la que puede ser utilizada cuando sea necesaria, que pueda ser modificada  y  si ya no es necesaria, poder eliminarla.    
+\item Es interactiva con el usuario, por lo que actualmente permite que sea fácil su uso y manipulación.
+\item Procesa gran cantidad de datos a una alta velocidad, lo que logra una optimización y reducción del tiempo. 
+\item Está formada por hardware que es el equipo físico o los dispositivos asociados a una computadora y el software que es el conjunto de instrucciones que indican a la computadora aquello que deben hacer.
+\item Recuperar Información: Su gran capacidad de almacenar información sería inútil si no pudiéramos recuperarla y examinarla rápida y fácilmente. Al respecto, el computador nos ofrece la posibilidad de revisar de forma instantánea y precisa cualquier información que hayamos guardado previamente en él. 
+\item Transmitir Información: Una de las funciones más importantes que posee el computador, es la posibilidad de compartir información entre usuarios de manera rápida, segura y exacta. Esta fantástica función dependerá si nuestro computador se encuentra conectado a Internet o a una red local.
+\item Facil Transporte: Las computadoras portátiles actualmente permiten que sean trasladadas de manera fácil al ser más compactas y con una batería de mayor duración.
+\item Alto Rendimiento: Las computadoras actuales tienen un mayor rendimiento debido a que sus componentes cada día son más potentes y rápidos.
+\item Costos Reducidos: Debido a la gran demanda y competencia que se tiene, las computadoras no son tan costosas como anteriormente y son de más fácil acceso para el resto de la población.
+\end{itemize}
+
+\section{Usos de la computadora}
+La computadora alctualmente al ser una gran herramienta para toda área tanto del sector industrial como educativo, tiene un gran número de funciones, entre las cuales podemos destacar: 
+
+\begin{itemize}
+\item Almacenar Información: La computadora tiene la capacidad de guardar, en un espacio reducido, gran cantidad de información que de otro modo tendríamos que conservar en miles de hojas, una excelente alternativa para mantener un orden más estricto con la información, amén del favor que le estamos haciendo al planeta. 
+\item Organizar Información: Esta función le ofrece al usuario la opción de ordenarla u organizarla de acuerdo a sus propias necesidades y estilo, de tal forma que podamos encontrarla y examinarla cuantas veces deseemos. Para ello provee de diferentes mecanismos, incluyendo potentes y versátiles gestores de archivos.
+\item Realizar operaciones a alta velocidad.
+\item Poder realizar diversas operaciones que permiten la facilidad a las diversas actividades cotidianas.
+\item Las computadoras actuales por su gran potencia, son muy útiles para trabajos de animación, fotografía y dibujo.
+\item Otra gran función de las computadoras es que son indispensables para la programación, ya que gracias a ellas es posible el desarrollo de miles de aplicaciones útiles para cualquier actividad.
+\end{itemize}
+
+\chapter{Partes de la computadora}
+Una computadora se compone principalmente del software, que se refiere al conjunto de programas, instrucciones y reglas informáticas, y el hardware que es el conjunto de los componentes físicos de los que está hecho el equipo. \par
+
+Por lo que a continuación se definirán las partes más importantes tanto del Hardware y del Software.
+
+\section{Hardware}
+Entre los principales componentes de hardware se la computadora se tienen:
+\subsection{Unidad Central De Procesamiento}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.2]{getimage.jpg}
+\end{figure}
+Dentro del microprocesador se encuentra la Unidad Central de Procesamiento (C.P.U.), es ahí donde todos los procesos y cómputos se llevan a cabo. Se le conoce como el cerebro de la computadora.\\ \\
+Entre sus funciones básicas se encuentran:\\ \\
+1. Clasificar: unir datos con las mismas características\\ 
+2. Ordenar: organizar datos en la secuencia deseada\\ 
+3. Comparar: establecer diferencias segun los parámetros establecidos\\ 
+4. Calcular: aplicar las funciones aritméticas\\ 
+5. Resumir: condensar los datos\\ 
+6. Almacenar: guardar los datos en un lugar seguro para ser utilizados en cualquier
+momento\\ 
+
+
+La unidad central de procesamiento posee dos partes principales:
+\begin{itemize}
+\item Unidad Aritmética y Lógica (A.L.U.): es la encargada de realizar las funciones aritméticas: suma, resta,
+multiplicación y división; funciones lógicas (SI/NO) o booleanas (Cierto/Falso); y las funciones de
+comparación: <, >, <=, >= .
+\item Unidad de Control (C.U.): es responsable de dirigir y coordinar todo el sistema de computación y es comparable con una central telefónica, es decir, la unidad de control dirige el flujo de información a
+través del computador.
+
+\end{itemize}
+
+\subsection{Memoria}
+La memoria es el principal lugar de trabajo de una computadora, ya que todo el procesamiento de información tiene lugar en ella; por ende, la memoria es el recurso más importante de la computadora.
+Determina tanto la complejidad, como el número de programas diferentes que pueden ejecutarse de forma simultánea. 
+\\
+
+La memoria se divide en:
+
+\begin{itemize}
+\item Memoria Principal: Es la encargada de almacenar programas y datos que se están ejecutando y su principal característica es que el acceso a los datos es muy rápido.
+Se divide en:
+\begin{itemize}
+\item Memoria de Acceso Aleatorio (Random Access Memory (RAM)): memoria de
+almacenamiento temporéro. Almacena los datos y programa el proceso, pero su
+contenido se pierde al apagar el computador. El contenido de esta memoria puede ser
+modificado.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{ram.jpg}
+\end{figure}
+\item Memoria Sólo Lectura (Read Only Memory (ROM)): memoria de almacenamiento
+permanente, sólo puede ser leída. Su contenido no puede ser modificado a menos que
+se cambien los circuitos dentro de la misma.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{rom.jpg}
+\end{figure}
+\end{itemize}
+\item Memoria Secundaria: Es un dispositivo de almacenamiento masivo de información y por ello a veces, se le conoce como memoria auxiliar, almacenamiento auxiliar externo o memoria externa. Su labor es la de complementar la memoria principal.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.15]{duro.png}
+\end{figure}
+\end{itemize}
+\subsection{Motherboard}
+
+Es una placa de circuito impreso a la que se conectan los componentes que constituyen la computadora u ordenador. Tiene instalados una serie de circuitos integrados, entre los que se encuentra el chipset, que sirve como centro de conexión entre el procesador, la memoria RAM, los buses de expansión y otros dispositivos. Va instalada dentro de una caja que por lo general está hecha de chapa y tiene un panel para conectar dispositivos externos y muchos conectores internos y zócalos para instalar componentes dentro de la caja. La placa base, además, incluye un software llamado BIOS, que le permite realizar las funcionalidades básicas, como pruebas de los dispositivos, vídeo y manejo del teclado, reconocimiento de dispositivos y carga del sistema operativo.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{mother.jpg}
+\end{figure}
+
+\subsection{Tarjeta de Video}
+Es un dispositivo electrónico que se encarga de regular y determinar la forma en cómo se mostraran las imágenes y texto que se observa en el monitor de la computadora. La calidad de la tarjeta de video en una computadora influye sobre todo a la hora de jugar, editar vídeo o 3D. Se encarga de traducir la información que se procesa en la computadora y mostrarla de manera que se pueda entender por el usuario común, a este dispositivo también se le conoce como controlador de vídeo, adaptador de vídeo, acelerador de vídeo o acelerador gráfico, en la actualidad existen muchas marcas y modelos de tarjetas de vídeo y la gran mayoría están destinadas para usuarios que requieren mucha capacidad gráfica para trabajar, por ejemplo los diseñadores gráficos o los vídeo jugadores.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.15]{video.jpg}
+\end{figure}
+
+\subsection{Unidad óptica}
+Esta unidad denominada CD rom, DVD rom o Blu ray Rom, son los dispositivos de entrada y almacenamiento más difundidos hasta ahora, y son usados para transportar datos como películas, programas, fotografías filmaciones etc., en tanto y cuanto se encuentren en formato digital. A pesar de su gran difusión y practicidad, ha comenzado a caer en desuso, sobre todo por los discos duros externos, que tienen mayor capacidad, lo que ha causado la existencia de las netbooks, que no cuentan con dicho dispositivo.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{optica.jpg}
+\end{figure}
+\subsection{Dispositivos E/S}
+Los dispositivos de Entrada/Salida (E/S) [Input/Output (I/O) en inglés] permiten la comunicación entre la computadora y el usuario. Los dispositivos de entrada, como su nombre indica, sirven para introducir datos (información) en la computadora para su proceso. Los datos se leen de los dispositivos de entrada y se almacenan en la memoria central o interna. Los dispositivos de entrada convierten la información de entrada en señales eléctricas que se almacenan en la memoria central. Dispositivos de entrada típicos son los teclados; otros son: lectores de tarjetas —ya en desuso—, lápices ópticos, palancas de mando (joystick), lectores de códigos de barras, escáneres, micrófonos, etc.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{es.jpg}
+\end{figure}
+
+\section{Software}
+Para que los componentes físicos de la computadora funcionen se necesita del software entre los programas más importantes tenemos:
+
+\begin{itemize}
+\item BIOS (Basic Imput/Output System): Es un sistema básico de entrada y salida. Es un conjunto de rutinas de software (programa), que
+contienen las instrucciones detalladas para activar los dispositivos periféricos conectados a la computadora. La rutina de “autoarranque” del BIOS es responsable de probar la memoria en el arranque y de la preparación de la computadora para su operación.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{bios.jpg}
+\end{figure}
+\item Sistemas Operativos: Un sistema operativo es un software de sistema, es decir, un conjunto de programas de computación destinados a realizar muchas tareas entre las que destaca la administración de los dispositivos periféricos. Se encarga de ejercer el control y coordinar el uso del hardware entre diferentes programas de aplicación y los diferentes usuarios. Es un administrador de los recursos de hardware del sistema.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{os.jpg}
+\end{figure}
+\item Software de Aplicación: Es capaz de realizar casi cualquier tarea imaginable.
+Es aquel que permite a los usuarios llevar a cabo una o varias tareas específicas, en cualquier campo de actividad susceptible de ser automatizado o asistido, con especial énfasis en los negocios. Es el conjunto de programas concebidos o creados para atender trabajos específicos del usuario, referidos al cumplimiento de sus diversos objetivos.
+Este software está diseñado y escrito para realizar tareas específicas personales, empresariales o científicas. Todas estas aplicaciones procesan datos y generan información.
+\item Controlador de dispositivo: Es un programa informático que permite al sistema operativo interactuar con un periférico, haciendo una abstracción del hardware y proporcionando una interfaz -posiblemente estandarizada- para usarlo. Se puede esquematizar como un manual de instrucciones que le indica cómo debe controlar y comunicarse con un dispositivo en particular. Por tanto, es una pieza esencial, sin la cual no se podría usar el hardware.
+\end{itemize}
+\chapter{Mantenimiento de la computadora}
+Para el mantenimiento preventivo es necesario ser cuidadoso, ya que es necesario quitar y poner las partes internas de la computadora, para estoy es necesario tener los conocimientos de cómo remover las partes y volverlas a introducir correctamente.
+
+\section{Materiales Necesarios Para el Mantenimiento}
+
+\begin{itemize}
+\item Desarmadores: Necesarios para remover todos los tornillos de la computadora.
+\item Espuma Limpiadora: Se utiliza para limpiar las pantallas y partes externas de la computadora.
+\item Aire Comprimido: Utilizado para remover el polvo de diversas partes de la computadora, tanto internas como externas.
+\item Limpia Contactos: Disuelve y elimina la suciedad, aceite, grasas y otros componentes, ideal para limpieza de equipos electrónicos, elimina formación de corrosión, depositos de carbón
+\item Brocha: Remueve el polvo de manera que no se pueda dañar el equipo.
+\item Toalla: Al momento de aplicar la espuma, se utiliza para limpiar el equipo.
+\item Pasta Térmica:  Se aplica entre la superficie superior del procesador y la superficie de contacto del disipador. Su finalidad es la de “mover” el calor del primer componente al segundo.
+\end{itemize}
+
+\section{Medidas de Seguridad}
+Estas medidas son necesarias, debido a que son vitales para la seguridad tanto del equipo como la del técnico.
+\begin{itemize}
+\item Antes de abrir cualquier computadora, es necesaria ver si tiene alguna falla, por lo que se recomienda encenderla primero y probrarla.
+\item Antes de quitar los tornillos es recomendable que se desconecte la computadora de cualquier fuente de energía, quitarle la batería y remover todos los cables exteriores.
+\item Utilizar el desarmador adecudado, y al momento de retirar todos los tornillos, colocarlos en un lugar donde no se puedan perder.
+\item Trabajar en un lugar limpio y libre de polvo.
+\item Tener el suficiente espacio para poder colocar todos los componentes sin que estos puedan caerse o perderse. 
+\item Nunca forzar ningún componente ya que puede quebrarse o dañarse.
+\end{itemize}
+\section{Desensamblamiento de la Computadora}
+Al tomar en cuenta las medidas de seguridad, se puede proceder al desensablamiento de la computadora. Los pasos a seguir son:
+\begin{enumerate}
+\item Teniendo la laptop apagada, desconectada y sin batería, cuidadosamente, remover el teclado.
+\item Al remover el teclado, quitar los tornillos que se encuentren debajo de éste, luego colocar el teclado en su lugar superficialente.
+\item Se cierra la laptop, de tal manera que la pantalla quede debajo, y la parte inferior en dirección hacia arriba.. 
+\item Se procede a retirar todos los tornillos de la parte inferior, y se colocan cuidadosamente en un lugar donde no se puedan perder.
+\item Se destornilla la placa donde se ubican la tarjeta RAM y el disco duro, luego la retiramos con cuidado de manera que no se quiebre la tapa.
+\item A continuación se procede a retirar la memoria RAM, presionando ligeramente los pines a sus esquinas. Luego de haberla retirarla, se desatornilla el tornillo que sostiene la unidad óptica, y retirar la unidad óptica.
+\item Se procede a retirar los tornillos del seguro que sostiene el disco duro, se remueve el seguro, y a continuación se quita el disco duro de la computadora.
+\item Con los componentes retirados, se procede a retirar la parte inferior de la computadora, cuidadosamente retirándola sin quebrarla y se puede proceder a la limpieza.
+\end{enumerate}
+\section{Limpieza de los componentes}
+Después de haber retirado todos los componentes se procede a la limpieza de los componentes internos. En la cual se debe realizar:
+\begin{enumerate}
+\item Al tener la motherboard descubierta, se procede a retirar el ventilador del procesador.
+\item Una vez que se haya retirado el ventilador, se limpia la pasta térmica antigua.
+\item Se procede a retirar todos los tornillos que aún sostienen a la motherboard, y con el aire comprimido y la brocha, retiramos todo el polvo que pueda estar acumulado, hasta que ya no quede nada. 
+\item Se vuelven a colocar los tornillos de la motherboard, y a continuación se utiliza el limpia contactos en toda la motherboard, y esperar hasta que se seque. 
+\item A continuación, limpiar el polvo que pueda existir en el ventilador, y colocamos la nueva pasta térmica en la base del procesador, de manera que quede uniforme y sin excesos, y se procede a colocar de nuevo el ventilador.
+\item A continuación, se coloca la parte inferior de la computadora y se troncha de tal manera que quede cerrada.
+\item Se atornillan todos los tornillos de la parte inferior, y se coloca la memoria RAM, el disco duro y la unidad óptica y se coloca la plaquita plástica quue protege a éstos. 
+\item Se voltea la computadora, y a continuación se atornillan los tornillos que se encuentran debajo del teclado, después de esto, se coloca el teclado.
+\item Una vez colocado el teclado, se procede a limpiarlo con una brocha y aire comprimido, eliminando toda la suciedad que éste pueda contener.
+\item En una toalla se aplica espuma y se procede a limpiar la pantalla y las partes ajenas al teclado de la computadora.
+\item Finalmente, se limpia con espuma, las detrás de la pantalla de la laptop, de manera que esté totalmente limpia.
+\item Al terminar el mantenimiento, se procede a enceder y probrar la computadora.
+\end{enumerate}
+
+\chapter{Ayuda}
+Al momento de realizar el mantenimiento de una computadora, podemos enfrentarnos a diversos problemas, en nuestro caso, tuvimos el problema que nos sobraron tornillos. Así que tuvimos que abrir de nuevo la computadora y ponerlos en su lugar.
+\\
+Por ese motivo siempre hay que estar atentos a cada paso que realicemos en el mantenimiento.
+\chapter{Bibliografía}
+\begin{itemize}
+\item \large http://www.uprm.edu/cti/docs/manuales/manuales-espanol/vax-vms/manuales/Intcomp.pdf
+\item \large http://www.informatica-hoy.com.ar/alfabetizacion-digital/Las-funciones-del-computador.php
+\item \large http://www.partesdeunacomputadora.net/
+\item https://bibliotecadeinvestigaciones.wordpress.com/informatica/software-los-programas-de-computadora/
+
+
+\end{itemize}
+\end{document}
